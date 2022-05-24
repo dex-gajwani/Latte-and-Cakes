@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".cakes">
+
+    <ImageView
+        android:id="@+id/lightbg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/lightbackground"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/additems"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginBottom="4dp"
+        android:background="#F3B27D"
+        android:gravity="center"
+        android:text="Previous      Next"
+        android:textColor="#602E05"
+        android:textSize="20sp"
+        android:layout_marginTop="689dp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/forward"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="689dp"
+        android:backgroundTint="#603E05"
+        android:text="+"
+        android:layout_marginLeft="57dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/backward"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="689dp"
+        android:layout_marginLeft="300dp"
+        android:backgroundTint="#603E05"
+        android:text="-"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/cakes"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#700C0C"
+        android:textColor="#ffff"
+        android:textSize="25sp"
+        android:text="Cakes"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_height="590dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp">
+            <ImageView
+                android:id="@+id/espresso"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/chocolavacake"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/chocolavadetail"
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/cardview1"
+                android:background="#4702"
+                android:gravity="center"
+                android:text="choco lava cake 95/-"
+                android:textColor="#470202"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="55dp"
+                android:layout_toRightOf="@+id/chocolavadetail"
+                android:gravity="center_horizontal" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                android:layout_below="@+id/cardview1">
+                <ImageView
+                    android:id="@+id/muffin"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/muffin"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/muffindetail"
+                android:layout_width="180dp"
+                android:background="#4702"
+                android:layout_height="140dp"
+                android:layout_below="@+id/chocolavadetail"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="35dp"
+                android:layout_toRightOf="@+id/cardview2"
+                android:gravity="center"
+                android:text="Muffin 80/-"
+                android:textColor="#470202"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/checkBox1"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="106dp"
+                android:layout_toRightOf="@+id/muffindetail"
+                android:gravity="center_horizontal" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                android:layout_below="@+id/cardview2">
+                <ImageView
+                    android:id="@+id/cupcake"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/cupcake"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/cupcakedetail"
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_below="@+id/muffindetail"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="17dp"
+                android:layout_toRightOf="@+id/cardview3"
+                android:gravity="center"
+                android:background="#4702"
+                android:text="Cupcake 120/-"
+                android:textColor="#470202"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/checkBox2"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="106dp"
+                android:layout_toRightOf="@+id/cupcakedetail"
+                android:gravity="center_horizontal" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container2"
+    tools:context=".MainActivity2">
+
+
+    <ImageView
+        android:id="@+id/lightbg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/lightbackground"
+        android:alpha="0.4"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+
+
+    <TextView
+        android:id="@+id/additems"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginBottom="4dp"
+        android:background="#F3B27D"
+        android:gravity="center"
+        android:text="Previous      Next"
+        android:textColor="#602E05"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/forward"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#603E05"
+        android:text="+"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/additems"/>
+    <Button
+        android:id="@+id/backward"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/additems"
+        android:layout_marginLeft="45dp"
+        android:backgroundTint="#603E05"
+        android:text="-"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/special"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="#700C0C"
+        android:gravity="center"
+        android:text="Beverages"
+        android:textColor="#ffff"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="594dp"
+        app:layout_constraintBottom_toTopOf="@+id/additems"
+        app:layout_constraintTop_toBottomOf="@+id/special">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp">
+                <ImageView
+                    android:id="@+id/espresso"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/espresso"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/espressodetail"
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/cardview1"
+                android:background="#4702"
+                android:gravity="center"
+                android:text="Eye Opener Espresso 105/-"
+                android:textColor="#470202"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="55dp"
+                android:layout_toRightOf="@+id/espressodetail"
+                android:gravity="center_horizontal" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                android:layout_below="@+id/cardview1">
+                <ImageView
+                    android:id="@+id/cappucino"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/cappucino"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/cappucinodetail"
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="180dp"
+                android:layout_toRightOf="@+id/cardview2"
+                android:background="#4702"
+                android:gravity="center"
+                android:text="Classic Cappucino 110/-"
+                android:textColor="#470505"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="110dp"
+                android:layout_below="@+id/checkBox1"
+                android:layout_toRightOf="@+id/cappucinodetail"
+                android:gravity="center_horizontal"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                android:layout_below="@+id/cardview2">
+                <ImageView
+                    android:id="@+id/filtercoffee"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/filtercoffee"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/filtercoffeedetail"
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/cappucinodetail"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/cardview3"
+                android:gravity="center"
+                android:text="Filter Coffee 120/-"
+                android:background="#4702"
+                android:textColor="#470505"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="110dp"
+                android:layout_below="@+id/checkBox2"
+                android:layout_toRightOf="@+id/filtercoffeedetail"
+                android:gravity="center_horizontal"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview4"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                android:layout_below="@+id/cardview3">
+                <ImageView
+                    android:id="@+id/caffelatte"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/caffelatte"
+                    android:scaleType="centerCrop"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/caffelattedetail"
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/filtercoffeedetail"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/cardview3"
+                android:background="#4702"
+                android:gravity="center"
+                android:text="Caffe Latte 135/-"
+                android:textColor="#470505"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="110dp"
+                android:layout_below="@+id/checkBox3"
+                android:layout_toRightOf="@+id/caffelattedetail"
+                android:gravity="center_horizontal"
+                />
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview5"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                android:layout_below="@+id/cardview4">
+                <ImageView
+                    android:id="@+id/vanillalatte"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/vanillalatte"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/vanilladetail"
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/caffelattedetail"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/cardview4"
+                android:background="#4702"
+                android:gravity="center"
+                android:text="Iced Vanilla Latte 175/-"
+                android:textColor="#470505"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="110dp"
+                android:layout_below="@+id/checkBox4"
+                android:layout_toRightOf="@+id/vanilladetail"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/selectcakes"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/checkBox5"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="20dp"
+                android:background="#FACFCF"
+                android:gravity="center"
+                android:text="Click to select cakes"
+                android:textColor="#ED0000"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/submitorder"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/selectcakes"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="#FACFCF"
+                android:gravity="center"
+                android:text="Click to Submit order"
+                android:textColor="#ED0000"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
